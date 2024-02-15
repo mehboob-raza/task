@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <h1>Company</h1>
+        </div>
+        <div class="menu">
+            <ul style="display: flex; align-items: center; margin-left: 12px; gap:10px">
+              <span class="menu-icon">&#9776;</span>
+                <li><a href="#" onclick="showHome()">Home</a></li>
+                <li><a href="#" onclick="showMessages()">Message</a></li>
+            </ul>
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search" style="width: 300px; border-radius: 8px; border:1px solid gray; height:24px">
+        </div>
+        <div class="notifications">
+            <span class="bell-icon">&#128276;</span>
+            <a href="#">Notification</a>
+        </div>
+        <div class="user">
+            <span class="welcome">Welcome,</span>
+            <span class="username">John Doe</span>
+            <div class="dropdown">
+              <span class="down-icon" id="dropdown-icon">&#9660;</span>
+              <div class="dropdown-content" id="dropdown-content">
+                  <a href="#">Logout</a>
+              </div>
+            </div>
+        </div>
+    </header>
+    <div class="chat-container">
+    <div class="sidebar">
+      
+      <div class="sidebar-content">
+        <button class="sidebar-btn active" data-target="all-messages" onclick="showChat()"><i class="fas fa-inbox"></i>All Messages</button>
+        <button class="sidebar-btn" data-target="completed"><i class="fas fa-check-circle"></i>Completed</button>
+        <button class="sidebar-btn" data-target="saved"><i class="fas fa-star"></i>Saved</button>
+        <button class="sidebar-btn" data-target="deleted"><i class="fas fa-trash"></i>Deleted</button>
+      </div>
+    </div>
+    <div style="display: flex; flex-direction: column;">
+      <h1>Messages</h1>
+      <h5 style="color: grey;">All Chats</h5>
+       <div class="chat" id="chat">
+        <div class="chat-message" onclick="openChat(this)">
+          <div class="avatar"><img src="avatar1.jpg" alt="Avatar"></div>
+          <div class="message-content">
+            <div class="sender">John Doe</div>
+            <div class="message">Hey, how's it going?</div>
+          </div>
+        </div>
+        <div class="chat-message" onclick="openChat(this)">
+          <div class="avatar"><img src="avatar2.jpg" alt="Avatar"></div>
+          <div class="message-content">
+            <div class="sender">Jane Smith</div>
+            <div class="message">Not bad, thanks! How about you?</div>
+          </div>
+        </div>
+      </div>
+      </div>
+      <div class="chat-view" id="chat-view">
+      
+      </div>
+    </div>
+
+
+
+
+
+
+<script src="script.js"></script>
+</body>
+</html>
